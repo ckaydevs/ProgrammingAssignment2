@@ -1,10 +1,10 @@
-## These two functions comput the inverse of a matrix, but instead of calculating every time the same inverse, it caches
-## the last value & returns it if the specified matrix is the same.
+## These two functions compute the inverse of a matrix, but instead of calculating every time the same inverse, it caches
+## the last value & returns it, if the specified matrix is the same.
 
 
 ## makeCacheMatrix takes in an argument which is by default an empty matrix. It returns a list of functions which
-## are set(sets the matrix vector), get (which gives the data stored), setsolve(stores the inverse of the matrix x),
-## and getsolve(it gets the cached inverse of a matrix for a specified matrix stored in x)
+## are (i)set(sets the matrix vector), (ii)get (which gives the matrix stored), (iii)setsolve(stores the inverse 
+##of the matrix x),and (iv)getsolve(it gets the cached inverse of a matrix for a specified matrix stored in x)
 
 makeCacheMatrix <- function(x = matrix()) {
         s<-NULL
@@ -22,7 +22,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 ## This function either computes the inverse of a matrix or returns the last computed(cached) value if the
-## matrix if it is unchanged.
+## matrix specified is unchanged.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
